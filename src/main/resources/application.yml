@@ -1,0 +1,24 @@
+server:
+  port: 9898
+  
+spring: 
+  thymeleaf: 
+    cache: false
+#    mode: HTML
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    suffix: .html
+    
+  datasource: 
+    url: jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false
+    username: root
+    password: gkaigk1987
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 100
+    initialSize: 10
+    minIdle: 1
+    
+mybatis: 
+  mapper-locations: classpath:/com/gk/mapper/*.xml
+  type-aliases-package: com.gk.model

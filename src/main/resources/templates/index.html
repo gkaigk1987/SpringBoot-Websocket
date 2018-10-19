@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"></meta>
+<title>Insert title here</title>
+<script src="/js/jquery.min.js?v=2.1.4"></script>
+<script src="/js/sockjs.min.js"></script>
+<script src="/js/stomp.min.js"></script>
+<script type="text/javascript">
+	var stompClient = null;
+	$(function(){
+		connect();
+	});
+	function connect() {
+		if(stompClient == null) {
+			var socket = new SockJS('http://localhost:9898/websocket');
+            stompClient = Stomp.over(socket);
+            stompClient.connect({}, function (frame) {
+            	 stompClient.subscribe('/topic/message', function (response) {
+            		 console.info(response.body);
+            	 });
+            });
+		}
+	}
+</script>
+</head>
+<body>
+	
+</body>
+</html>
