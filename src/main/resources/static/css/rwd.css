@@ -1,0 +1,97 @@
+@charset "UTF-8";
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+}
+
+.rwd-body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header {
+	width : 100%;
+	background-color: #666666;
+	min-height: 3em;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	
+}
+footer {
+	width : 100%;
+	background-color: #666666;
+	min-height: 3em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.rwd-main {
+  display: flex;
+  flex: 1;
+}
+
+.rwd-content {
+  flex: 1;
+  background-color: #D6D6D6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+/*   height: 1000px; */
+}
+
+.rwd-ads {
+   flex: 0 0 12em;
+   background-color: #FF6633;
+}
+
+.rwd-nav {
+  /* 宽度设为20em */
+  flex: 0 0 20em;
+}
+
+.rwd-nav h4 a {
+	font-size: 0.875em;
+	color: #5e5e5e;
+	text-decoration: none;
+	display: block;
+}
+
+.rwd-nav .list-unstyled li a {
+	font-size: 0.875em;
+	color: #23527c;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.menuicon {
+	display: none;
+	font-size: 1.25em;
+}
+
+@media (max-width : 768px) {
+	.rwd-main {
+		flex-direction: column;
+		flex: 1;
+	}
+	 .rwd-ads {
+		flex: 0 0 8em;
+	}
+	.rwd-nav {
+		display: none;
+	}
+	header {
+		display : flex;
+		/* flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start; */
+	}
+	.menuicon {
+		display: block;
+	}
+}

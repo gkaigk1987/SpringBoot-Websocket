@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+$(function() {
+
+//	$('.menuicon').click(function() {
+//		
+//	});
+});
