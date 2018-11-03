@@ -22,6 +22,20 @@ header {
 	align-items: center;
 	
 }
+
+.menu {
+	width: 10rem;
+}
+
+.menu_container_1 {
+	display: none;
+	opacity: 0;
+	width: 30%;
+	-webkit-transform: translateY(-200%);
+	-ms-transform: translateY(-200%);
+    transform: translateY(-200%);
+}
+
 footer {
 	width : 100%;
 	background-color: #666666;
@@ -93,5 +107,32 @@ footer {
 	}
 	.menuicon {
 		display: block;
+		font-size: 1.5rem;
+	}
+	header .menu {
+		visibility: hidden;
+	}
+	
+	/* .menu_container_1 > .menu {
+		
+	} */
+	
+	.menu_container_1-activ {
+		display: block;
+		position : absolute;
+		z-index : 999;
+		margin-top : 3rem;
+		background : #000000;
+	    opacity: 1;
+	    width: 50%;
+	    -webkit-transition: ease-in 0.5s all;
+	    transition: ease-in 0.5s all;
+	    -webkit-transform: translateY(0);
+	    -ms-transform: translateY(0);
+	    transform: translateY(0);
+	}
+	
+	.menu_container_1-activ > .menu {
+		color: white;
 	}
 }
