@@ -88,6 +88,12 @@ footer {
 	font-size: 1.25em;
 }
 
+ .chevro{
+ 	float: right; 
+ 	color: black;
+ 	padding-right: .3rem;
+ }
+
 @media (max-width : 768px) {
 	.rwd-main {
 		flex-direction: column;
@@ -97,7 +103,11 @@ footer {
 		flex: 0 0 8em;
 	}
 	.rwd-nav {
-		display: none;
+		/* display: none; */
+		display: block;
+		position : absolute;
+		z-index : 99;
+		min-width: 40%;
 	}
 	header {
 		display : flex;
@@ -112,10 +122,6 @@ footer {
 	header .menu {
 		visibility: hidden;
 	}
-	
-	/* .menu_container_1 > .menu {
-		
-	} */
 	
 	.menu_container_1-activ {
 		display: block;
@@ -134,5 +140,9 @@ footer {
 	
 	.menu_container_1-activ > .menu {
 		color: white;
+	}
+	
+	.chevro {
+		padding-right: .1rem;
 	}
 }
