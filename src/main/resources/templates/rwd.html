@@ -15,17 +15,21 @@
 	<header>
 		<div class="menuicon">
 			<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+			<div class="aggs">聚类</div>
 		</div>
-		<div class="menu">1111</div>
-		<div class="menu">2222</div>
-		<div class="menu">3333</div>
+		<div class="menu">首页</div>
+		<div class="menu">数据库导航</div>
+		<div class="menu">出版物检索</div>
 	</header>
-	<div class="menu_container_1">
-		<div class="menu">1111</div>
-		<div class="menu">2222</div>
-		<div class="menu">3333</div>
+	<!-- 以下是移动端小屏(最大768px)显示菜单 -->
+	<div class="menu_container">
+		<div class="menu">首页</div>
+		<div class="menu">数据库导航</div>
+		<div class="menu">出版物检索</div>
 	</div>
+	
 	<div class="rwd-main">
+		<!-- 左侧聚类开始 -->
 		<div class="rwd-nav">
 			<div class="row">
 				<div class=".col-xs-12 .col-sm-12 .col-md-12">
@@ -40,8 +44,8 @@
 								</h4>
 							</div>
 							<div class="panel-collapse collapse in" id="col1" aria-expanded="true">
-								<div class="panel-body">
-									<ul class="list-unstyled" data-id="col1" data-facetlabel="学科" style="margin-left:10px;">   
+								<div class="panel-body panel_bottom">
+									<ul class="list-unstyled li_margin" data-id="col1" data-facetlabel="学科">   
 										<li data-value="Electrical engineering" value="Electrical engineering"  data-valuelabel="Electrical engineering">
 											<a>&nbsp;Electrical engineering&nbsp;&nbsp;(2918)</a>
 										</li>   
@@ -56,12 +60,6 @@
 										<li data-value="Women's studies" value="Women's studies"  data-valuelabel="Women's studies">
 											<a>&nbsp;Women's studies&nbsp;&nbsp;(602)</a>
 										</li>   
-										<li data-value="Energy" value="Energy"  data-valuelabel="Energy">
-											<a>&nbsp;Energy&nbsp;&nbsp;(522)</a>
-										</li>   
-										<li data-value="Materials science" value="Materials science"  data-valuelabel="Materials science">
-											<a>&nbsp;Materials science&nbsp;&nbsp;(494)</a>
-										</li>
 								      	<span id="ts_df_str_subject_strmenu_open" style="display: inline-block;margin-top:5px;">
 								      		<a onclick="#" style="color:black;font-size: 0.875em;cursor: pointer;text-decoration: none;"> &nbsp;&nbsp;&nbsp;<font>更多选项</font>...</a>
 								      	</span> 
@@ -79,8 +77,8 @@
 								</h4>
 							</div>
 							<div class="panel-collapse collapse in" id="col2" aria-expanded="true">
-								<div class="panel-body">
-									<ul class="list-unstyled" data-id="col2" data-facetlabel="学科" style="margin-left:10px;">   
+								<div class="panel-body panel_bottom">
+									<ul class="list-unstyled li_margin" data-id="col2" data-facetlabel="学科">   
 										<li data-value="Electrical engineering" value="Electrical engineering"  data-valuelabel="Electrical engineering">
 											<a>&nbsp;Electrical engineering&nbsp;&nbsp;(2918)</a>
 										</li>   
@@ -95,12 +93,6 @@
 										<li data-value="Women's studies" value="Women's studies"  data-valuelabel="Women's studies">
 											<a>&nbsp;Women's studies&nbsp;&nbsp;(602)</a>
 										</li>   
-										<li data-value="Energy" value="Energy" style="display:none" data-valuelabel="Energy">
-											<a>&nbsp;Energy&nbsp;&nbsp;(522)</a>
-										</li>   
-										<li data-value="Materials science" value="Materials science" style="display:none" data-valuelabel="Materials science">
-											<a>&nbsp;Materials science&nbsp;&nbsp;(494)</a>
-										</li>
 								      	<span id="ts_df_str_subject_strmenu_open" style="display: inline-block;margin-top:5px;">
 								      		<a onclick="#" style="color:black;font-size: 0.875em;cursor: pointer;text-decoration: none;"> &nbsp;&nbsp;&nbsp;<font>更多选项</font>...</a>
 								      	</span> 
@@ -112,13 +104,17 @@
 				</div>
 			</div>
 		</div>
-		<div class="rwd-content">
-			121212
-		</div>
-		<div class="rwd-ads">
-			这里是相关广告说明
-		</div>
+		<!-- 左侧聚类结束 -->
+		
+		<!-- 中间内容开始 -->
+		<div class="rwd-content">121212</div>
+		<!-- 中间内容结束 -->
+		
+		<!-- 右侧广告开始 -->
+		<div class="rwd-ads">这里是相关广告说明</div>
+		<!-- 右侧广告结束 -->
 	</div>
+	
 	<footer>This web footer</footer>
 </body>
 </html>

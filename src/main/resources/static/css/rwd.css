@@ -1,72 +1,109 @@
 @charset "UTF-8";
-html,
-body {
+
+html, body {
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
 }
 
-.rwd-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
 header {
-	width : 100%;
+	width: 100%;
 	background-color: #666666;
 	min-height: 3em;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
 	flex-direction: row;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
 	justify-content: flex-start;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
-	
+}
+
+footer {
+	position: fixed;
+	bottom: 0px; width : 100%;
+	background-color: #666666;
+	min-height: 3em;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 100%
 }
 
 .menu {
 	width: 10rem;
+	color: highlight;
 }
 
-.menu_container_1 {
+.menu_container {
 	display: none;
 	opacity: 0;
 	width: 30%;
 	-webkit-transform: translateY(-200%);
 	-ms-transform: translateY(-200%);
-    transform: translateY(-200%);
+	transform: translateY(-200%);
 }
 
-footer {
-	width : 100%;
-	background-color: #666666;
-	min-height: 3em;
+.rwd-body {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	min-height: 100vh;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
 }
 
 .rwd-main {
-  display: flex;
-  flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
 }
 
 .rwd-content {
-  flex: 1;
-  background-color: #D6D6D6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-/*   height: 1000px; */
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	background-color: #D6D6D6;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 .rwd-ads {
-   flex: 0 0 12em;
-   background-color: #FF6633;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 12em;
+	flex: 0 0 12em;
+	background-color: #FF6633;
 }
 
 .rwd-nav {
-  /* 宽度设为20em */
-  flex: 0 0 20em;
+	/* 宽度设为20em */
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 20em;
+	flex: 0 0 20em;
 }
 
 .rwd-nav h4 a {
@@ -83,66 +120,114 @@ footer {
 	cursor: pointer;
 }
 
-.menuicon {
-	display: none;
-	font-size: 1.25em;
+.li_margin {
+	margin-left: 10px;
 }
 
- .chevro{
- 	float: right; 
- 	color: black;
- 	padding-right: .3rem;
- }
+.menuicon {
+	display: none;
+	/* font-size: 1.25em; */
+}
 
-@media (max-width : 768px) {
+.chevro {
+	float: right;
+	color: black;
+	padding-right: .3rem;
+}
+
+/* 最大视口宽度为768px */
+@media ( max-width : 768px) {
 	.rwd-main {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
 		flex: 1;
 	}
-	 .rwd-ads {
+	.rwd-ads {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 8em;
 		flex: 0 0 8em;
 	}
 	.rwd-nav {
-		/* display: none; */
+		display: none;
+	}
+	.rwd-nav-active {
 		display: block;
-		position : absolute;
-		z-index : 99;
+		position: absolute;
+		z-index: 99;
 		min-width: 40%;
 	}
-	header {
-		display : flex;
-		/* flex-direction: column;
-		justify-content: flex-start;
-		align-items: flex-start; */
+	.rwd-nav-unactive {
+		display: none;
 	}
-	.menuicon {
-		display: block;
-		font-size: 1.5rem;
+	.panel_bottom {
+		padding-bottom: 0px;
+	}
+	header {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
 	}
 	header .menu {
 		visibility: hidden;
 	}
-	
-	.menu_container_1-activ {
+	.menuicon {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+	.menuicon .glyphicon {
+		font-size: 1.5rem;
+	}
+	.aggs {
+		margin-left: .75rem;
+		width: auto;
+		white-space: nowrap;
+	}
+	.menu_container-active {
 		display: block;
-		position : absolute;
-		z-index : 999;
-		margin-top : 3rem;
-		background : #000000;
-	    opacity: 1;
-	    width: 50%;
-	    -webkit-transition: ease-in 0.5s all;
-	    transition: ease-in 0.5s all;
-	    -webkit-transform: translateY(0);
-	    -ms-transform: translateY(0);
-	    transform: translateY(0);
+		position: absolute;
+		z-index: 999;
+		margin-top: 3rem;
+		background: #000000;
+		opacity: 0.7;
+		width: 50%;
+		-webkit-transition: ease-in 0.5s all;
+		-o-transition: ease-in 0.5s all;
+		transition: ease-in 0.5s all;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
 	}
-	
-	.menu_container_1-activ > .menu {
-		color: white;
+	.menu_container-unactive {
+		display: none;
 	}
-	
+	.li_margin {
+		margin-left: 5px;
+	}
 	.chevro {
 		padding-right: .1rem;
+	}
+}
+
+/* 视口宽度为768px 至  1024px 之间*/
+@media ( min-width : 768px) and (max-width : 1024px) {
+	.rwd-nav {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 15em;
+		flex: 0 0 15em;
 	}
 }
