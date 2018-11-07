@@ -45,6 +45,7 @@ footer {
 .menu {
 	width: 10rem;
 	color: highlight;
+	text-align: center;
 }
 
 .menu_container {
@@ -74,22 +75,28 @@ footer {
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
+	width: 94vw;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .rwd-content {
+	margin-left : 1.25rem;
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
-	background-color: #D6D6D6;
+/* 	background-color: #D6D6D6; */
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
+	flex-direction: column;
+	margin-bottom: 5rem;
+	/* -webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
-	align-items: center;
+	align-items: center; */
 }
 
 .rwd-ads {
@@ -102,8 +109,8 @@ footer {
 .rwd-nav {
 	/* 宽度设为20em */
 	-webkit-box-flex: 0;
-	-ms-flex: 0 0 20em;
-	flex: 0 0 20em;
+	-ms-flex: 0 0 18em;
+	flex: 0 0 18em;
 }
 
 .rwd-nav h4 a {
@@ -135,6 +142,97 @@ footer {
 	padding-right: .3rem;
 }
 
+.ads_show {
+	display: none;
+	font-size: 1.5rem;
+}
+
+/* 中间区域检索内容开始 */
+.table {
+	margin-bottom: 0px;
+}
+.table > tbody > tr > td {
+	border-top: 0px;
+}
+
+.table > tbody> tr > td > h2 {
+	font-size: 1.125rem;
+	display: inline;
+	color: rgba(10, 11, 13, 0.64);
+	font-weight: bold;
+	font-style: italic;
+}
+
+.table > tbody > tr > td > a {
+	font-size: 1.125rem;
+	color: #23527c;
+}
+
+.row_item {
+	width: 100%;
+}
+
+.nav-pills > li > a {
+	color: gray;
+	font-size: 0.875rem;
+	cursor: pointer;
+}
+
+.nav-pills > li > a:hover {
+	color: #FBA052;
+}
+
+.table .col-md-10 p {
+	display: inline;
+}
+
+.viewSummary {
+	padding: 10px 15px;
+	color: gray;
+	font-size: 0.875rem;
+}
+
+.viewSummary:hover {
+	border-radius: 4px;
+	background-color: #eee;
+	color: #FBA052;
+	cursor: pointer;
+}
+
+.item_border {
+	border-bottom:1px solid #ccc;
+	margin:10px 0px;
+}
+
+.dropdown_hide {
+	display: none;
+}
+
+.summary {
+	display: none;
+	width: 100%;
+	height: auto;
+	background-color: rgb(238, 238, 238);
+	padding: 10px 20px;
+	border-radius: 4px;
+}
+
+.summary > h4 {
+	font-weight:bold;
+	font-size: 0.875rem;
+}
+
+.summary > p {
+	text-indent: 2em;
+}	
+
+.toggleSummary {
+	background-color: #eee;
+    border-radius: 4px 4px 0px 0px;
+}
+
+/* 中间区域检索内容结束 */
+
 /* 最大视口宽度为768px */
 @media ( max-width : 768px) {
 	.rwd-main {
@@ -145,35 +243,57 @@ footer {
 		-webkit-box-flex: 1;
 		-ms-flex: 1;
 		flex: 1;
+		width: 100vw;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
 	}
+	
+	.rwd-content {
+		margin-left: 0em;
+	}
+	
 	.rwd-ads {
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 8em;
 		flex: 0 0 8em;
 	}
+	
 	.rwd-nav {
 		display: none;
 	}
+	
 	.rwd-nav-active {
 		display: block;
 		position: absolute;
 		z-index: 99;
 		min-width: 40%;
 	}
+	
 	.rwd-nav-unactive {
 		display: none;
 	}
+	
+	/* .panel_class {
+		background-color: #000;
+		opacity: 0.7;
+	} */
+	
 	.panel_bottom {
 		padding-bottom: 0px;
 	}
+	
 	header {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
 	}
+	
 	header .menu {
 		visibility: hidden;
 	}
+	
 	.menuicon {
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -189,14 +309,17 @@ footer {
 		-ms-flex-align: center;
 		align-items: center;
 	}
+	
 	.menuicon .glyphicon {
 		font-size: 1.5rem;
 	}
+	
 	.aggs {
 		margin-left: .75rem;
 		width: auto;
 		white-space: nowrap;
 	}
+	
 	.menu_container-active {
 		display: block;
 		position: absolute;
@@ -212,22 +335,167 @@ footer {
 		-ms-transform: translateY(0);
 		transform: translateY(0);
 	}
+	
 	.menu_container-unactive {
 		display: none;
 	}
+	
 	.li_margin {
 		margin-left: 5px;
 	}
+	
 	.chevro {
 		padding-right: .1rem;
+	}
+	
+	/* .nav-pills {
+		display: flex;
+		flex-direction: column;
+	} */
+	
+	.nav-pills > li > a {
+		font-size: 0.75rem;
+		/* padding: 10px 10px; */
+	}
+	
+	.nav-pills {
+		display: none;
+	}
+	
+	.table > tbody > tr > td > h2 {
+		font-size:0.935rem;
+	}
+	
+	.table > tbody > tr > td > a {
+		font-size:0.935rem;
+	}
+	
+	.table .col-md-10 {
+		font-size:0.935rem;
+	}
+	
+	.table .col-md-10 p {
+		display: inline;
+	}
+	
+	.table .col-md-1 {
+		display: none;
+	}
+	
+	.viewSummary {
+		padding: 10px 10px;
+		font-size: 0.875rem;
+	}
+	
+	.dropdown_hide {
+		display: flex;
+		padding-left: 8px;
+		justify-content: space-between;
+	}
+	
+	.dropdown_hide > .li_menu > a {
+		font-size : 0.875rem;
+		border-radius : 4px;
+		position: relative;
+    	display: block;
+    	padding: 10px 10px;
+    	color: grey;
+	}
+	
+	.dropdown_hide .li_menu > a:focus, .dropdown_hide .li_menu > a:hover{
+		background-color : #eee;
+		color: #FBA052;
+		text-decoration: none;
+	}
+	
+	.li_menu > ul > li > a {
+		color: gray;
+		font-size: 0.875rem;
+	}
+	
+	.summary > p {
+		font-size: 0.75rem;
+	}	
+	
+	.item_border {
+		margin: 5px 0px;
 	}
 }
 
 /* 视口宽度为768px 至  1024px 之间*/
-@media ( min-width : 768px) and (max-width : 1024px) {
+@media ( min-width : 769px) and (max-width : 1024px) {
+	
+	.ads_show {
+		display: flex;
+		width : calc(100% - 30rem);
+		margin-right : 1.25rem;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	.rwd-main {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+		flex-direction : row;
+		/* flex-wrap : wrap; */
+		width: 100vw;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	
 	.rwd-nav {
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 15em;
 		flex: 0 0 15em;
 	}
+	
+	.rwd-content {
+		margin-left: 1.25rem;
+		/* min-width: calc(100vw - 16.25rem); */
+	}
+	
+	.rwd-ads {
+		display : none;
+	} 
+	
+	.rwd-ads-active {
+		display : block;
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 10em;
+		flex: 0 0 10em;
+		/* position: static; */
+		z-index: 10;
+		opacity: 0.75;
+	}
+	
+	.table > tbody > tr > td > h2 {
+		font-size:0.875rem;
+	}
+	
+	.table > tbody > tr > td > a {
+		font-size:0.875rem;
+	}
+	
+	.table .col-md-10 {
+		font-size:0.875rem;
+	}
+	
+	.nav-pills > li > a {
+		font-size: 0.75rem;
+	}
+	
+	.viewSummary {
+		padding: 10px 10px;
+		font-size: 0.75rem;
+	}
+	
+	.summary > p {
+		font-size: 0.875px;
+	}	
 }

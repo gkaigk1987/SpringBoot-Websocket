@@ -1,5 +1,5 @@
 /**
- * 
+ * 响应式布局JS
  */
 $(function() {
 
@@ -29,6 +29,19 @@ $(function() {
 		if(flag) {
 			$('.rwd-nav').addClass('rwd-nav-active');
 		}
+	});
+	
+	$('.ads_show .glyphicon-menu-hamburger').click(function(e) {
+		e.preventDefault();
+		$('.rwd-ads').toggleClass('rwd-ads-active');
+	});
+	
+	$('.viewSummary').click(function() {
+		$(this).children('.fa-angle-down').toggleClass('hidden'); 
+		$(this).children('.fa-angle-up').toggleClass('hidden');
+		$(this).toggleClass('toggleSummary');
+		var id = $(this).attr('id');
+		$('#summary_' + id).slideToggle();
 	});
 	
 	$('.menu').click(function() {
