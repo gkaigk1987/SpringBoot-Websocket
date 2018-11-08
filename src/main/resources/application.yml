@@ -22,3 +22,4 @@ spring:
 mybatis: 
   mapper-locations: classpath:/com/gk/mapper/*.xml
   type-aliases-package: com.gk.model
+  

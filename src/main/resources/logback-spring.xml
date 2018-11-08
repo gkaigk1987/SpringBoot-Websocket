@@ -12,7 +12,7 @@
 		<file>logs/mylog.log</file>
 		<!-- 基于日志大小和时间的日志归档 -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-			<fileNamePattern>E:\mylog-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<fileNamePattern>logs/mylog-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
 			<maxFileSize>100MB</maxFileSize>
 			<!-- 日志保存60天 -->
 			<maxHistory>60</maxHistory>

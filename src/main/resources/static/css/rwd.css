@@ -27,7 +27,8 @@ header {
 
 footer {
 	position: fixed;
-	bottom: 0px; width : 100%;
+	bottom: 0px; 
+	width : 100%;
 	background-color: #666666;
 	min-height: 3em;
 	display: -webkit-box;
@@ -40,6 +41,17 @@ footer {
 	-ms-flex-align: center;
 	align-items: center;
 	width: 100%
+}
+
+.rwd-body {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	min-height: 100vh;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
 }
 
 .menu {
@@ -57,15 +69,14 @@ footer {
 	transform: translateY(-200%);
 }
 
-.rwd-body {
-	display: -webkit-box;
-	display: -ms-flexbox;
+.rwd-search {
+	width: 100%;
+	background-color: #eee;
+	min-height: 9rem;
 	display: flex;
-	min-height: 100vh;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .rwd-main {
@@ -89,7 +100,10 @@ footer {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	margin-bottom: 5rem;
 	/* -webkit-box-pack: center;
 	-ms-flex-pack: center;
@@ -388,9 +402,13 @@ footer {
 	}
 	
 	.dropdown_hide {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		padding-left: 8px;
-		justify-content: space-between;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
 	}
 	
 	.dropdown_hide > .li_menu > a {
@@ -426,11 +444,17 @@ footer {
 @media ( min-width : 769px) and (max-width : 1024px) {
 	
 	.ads_show {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		width : calc(100% - 30rem);
 		margin-right : 1.25rem;
-		justify-content: flex-end;
-		align-items: center;
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 	}
 
 	.rwd-main {
@@ -440,7 +464,10 @@ footer {
 		-webkit-box-flex: 1;
 		-ms-flex: 1;
 		flex: 1;
-		flex-direction : row;
+		-webkit-box-orient : horizontal;
+		-webkit-box-direction : normal;
+		    -ms-flex-direction : row;
+		        flex-direction : row;
 		/* flex-wrap : wrap; */
 		width: 100vw;
 		margin-left: 0px;
