@@ -57,4 +57,14 @@ public class IndexController {
 		return "rwd";
 	}
 	
+	/**
+	 * 
+	 * @param model
+	 * @return
+	 */
+	@GetMapping("/rwd_index")
+	public String rwdIndex(Model model) {
+		return "rwd_index";
+	}
+	
 }
