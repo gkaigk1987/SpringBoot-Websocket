@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <link rel="stylesheet" href="/css/bootstrap.min.css"></link>
 <link rel="stylesheet" href="/css/font-awesome.min.css"></link>
-<link rel="stylesheet" href="/css/rwd_index.css"></link>
+<link rel="stylesheet" href="/css/rwd/rwd_index.css"></link>
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/bootstrap/bootstrap.min.js"></script>
-<script type="text/javascript" src="/js/rwd_index.js"></script>
+<script type="text/javascript" src="/js/rwd/rwd_index.js"></script>
 <title>RWD-Demo</title>
 </head>
 <body class="rwd-body">
@@ -40,13 +40,21 @@
 		</div>
 	</header>
 	<div class="search_main">
-		<div><img alt="" src="/img/web-index.png" /> </div>
+		<div class="index_img"><img alt="" src="/img/web-index.png" /> </div>
 		<div class="search_title">学位论文全文检索平台</div>
 		<div class="input-group search_group">
 			<input type="text" class="form-control search_input"  placeholder="请输入你要检索的英文..." autocomplete="off" />
 			<div class="input-group-btn">
-				<button type="button" class="btn btn-primary search_button">检  索</button>
+				<button type="button" class="btn btn-primary search_button do_search">检  索</button>
 			</div>
+		</div>
+		<!-- <div class="min_search inner-addon right-addon">
+			<i class="glyphicon glyphicon-search search_icon do_search"></i>
+			<input type="text" class="form-control search_input"  placeholder="请输入你要检索的英文..."/>
+		</div> -->
+		<div class="input-group min_search">
+		  <input type="text" class="form-control search_input" placeholder="请输入你要检索的英文..." />
+		  <span class="input-group-addon do_search"><i class="glyphicon glyphicon-search"></i></span>
 		</div>
 		<div class="search_select">
 			<div class="checkbox checkbox-primary">
@@ -64,22 +72,18 @@
 		</div>
 		<div class="search_additional">
 			<div class="hot_keywords">
-				<div class="hot_title">1</div>
-				<div class="hot_content">1</div>
+				<div class="hot_title">热门词</div>
+				<div class="hot_content">热门词云图</div>
 			</div>
 			<div class="announcement">
-				<div class="announcement_title">1</div>
+				<div class="announcement_head">中科公告</div>
 				<div class="announcement_list">
-				1
-				</div>
-				<div class="announcement_list">
-				1
-				</div>
-				<div class="announcement_list">
-				1
-				</div>
-				<div class="announcement_list">
-				1
+					<div class="announcement_title"><a>中科公告1</a></div>
+					<div class="announcement_title"><a>中科公告2</a></div>
+					<div class="announcement_title"><a>中科公告3</a></div>
+					<div class="announcement_title"><a>中科公告4</a></div>
+					<div class="announcement_title"><a>中科公告5</a></div>
+					<div class="announcement_title"><a>更多...</a></div>
 				</div>
 			</div>
 		</div>

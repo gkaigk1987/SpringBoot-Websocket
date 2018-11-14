@@ -54,7 +54,7 @@ public class IndexController {
 	 */
 	@GetMapping("/rwd")
 	public String rwd(Model model) {
-		return "rwd";
+		return "rwd/rwd";
 	}
 	
 	/**
@@ -64,7 +64,17 @@ public class IndexController {
 	 */
 	@GetMapping("/rwd_index")
 	public String rwdIndex(Model model) {
-		return "rwd_index";
+		return "rwd/rwd_index";
+	}
+	
+	/**
+	 * 
+	 * @param model
+	 * @return
+	 */
+	@GetMapping("/rwd_detail")
+	public String rwdDetail(Model model) {
+		return "rwd/rwd_detail";
 	}
 	
 }
