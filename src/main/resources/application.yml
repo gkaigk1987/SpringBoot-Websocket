@@ -4,7 +4,7 @@ server:
 spring: 
   thymeleaf: 
     cache: false
-#    mode: HTML
+    mode: LEGACYHTML5 #去掉Thymeleaf强制校验，搭配nekohtml使用
     encoding: UTF-8
     prefix: classpath:/templates/
     suffix: .html

@@ -88,6 +88,12 @@
 		    <version>4.0.3</version>
 		</dependency> -->
 		
+		<!-- 去掉thymeleaf强制校验 -->
+		<dependency>
+		    <groupId>net.sourceforge.nekohtml</groupId>
+		    <artifactId>nekohtml</artifactId>
+		</dependency>
+		
 	</dependencies>
 	
 	<build>

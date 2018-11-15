@@ -3,6 +3,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
+	font-family: "Microsoft Yahei"
 }
 
 header {
@@ -58,6 +59,10 @@ footer {
 	font-size: 1.875rem;
 	color: #fff;
 	padding-left: 40px;
+}
+
+.op_select {
+	display: none;
 }
 
 .header_right {
@@ -118,6 +123,121 @@ footer {
 	color: #fff;
 }
 
+.detail {
+	margin-top : 20px;
+	width: 94vw;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	flex-direction: row;
+	margin-bottom: 3rem;
+}
+
+.detail .detail_content {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding-left: 10px;
+	padding-right: 20px;
+}
+
+.detail .detail_content .thesis_title {
+	font-size: 1.5rem;
+}
+
+.detail .detail_content .thesis_author {
+	color: #506ecb;
+	font-weight: 700;
+}
+
+.detail .detail_content .detail_item {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.content_padding {
+	padding: 10px;
+}
+
+.summary_title {
+	font-size: 1.5rem;
+}
+
+.summary_content {
+	margin-top: 20px;
+}
+
+.detail_subject {
+	margin-top: 20px;
+}
+
+.subject_title {
+	font-size: 1.5rem;
+}
+
+.subject_item {
+	display: flex;
+	flex-direction: column;
+}
+
+.display_record_indexing_row {
+	display: flex;
+	flex-direction: row;
+	justify-content : flex-start;
+	align-items : center;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.zebra-stripe {
+	background-color: #f6f6f6;
+}
+
+.display_record_indexing_fieldname {
+	min-width: 20%;
+}
+
+.display_record_indexing_data {
+	word-wrap : break-word;
+	overflow: hidden;
+}
+
+.detail .detail_operate {
+	width: 20%;
+}
+
+.detail .detail_operate .op_lay {
+	background-color: #f0f0f0;
+	padding: 10px;
+	width: 80%;
+}
+
+
+.row_lay {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+.item_lay {
+	padding: 10px;
+	width: 35%;
+}
+
+.item_lay:hover {
+	cursor: pointer;
+}
+
+.item_lay a {
+	text-decoration: none;
+}
+
 
 /* 最大视口宽度为768px */
 @media ( max-width : 768px) {
@@ -149,13 +269,43 @@ footer {
 		padding-left: 10px;
 	}
 	
-	.header_right {
-		min-height : 3rem;
-		min-height : 0rem;
+	.max_v {
+		display: none;'
+	}
+	
+	.op_select {
+		display : flex;
 		width : 100%;
+		min-height : 3rem;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	.detail_select {
+		padding-left: 10px;
+	}
+	
+	.detail_select .fa {
+		font-size: 1.5rem;
+		color: #93ACD0;
+	}
+	
+	.detail_select .dropdown a {
+		font-size: 0.875rem;
+	}
+	
+	
+	/* .header_right {
+		min-height : 3rem;
+		width : 70%;
 		-webkit-box-pack: end;
 		-ms-flex-pack: end;
 		justify-content: flex-end;	
+	} */
+	
+	.header_right {
+		min-height: 3rem;
 	}
 	
 	.header_right .dropdown {
@@ -189,10 +339,55 @@ footer {
 		font-size: 1.5rem;
 	}
 	
+	.detail {
+		margin-top: 10px;
+	}
+	
+	.detail .detail_content {
+		width: 100%;
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	
+	.detail .detail_content p {
+		margin: 0 0 5px;
+	}
+	
+	.detail .detail_content .detail_item {
+		margin-top: 10px;
+	}
+	
+	.detail_item ul li a {
+		font-size: 0.875rem;
+	}
+	
+	.detail .summary_content {
+		margin-top: 10px;
+	}
+	
+	.detail .detail_subject {
+		margin-top: 10px;
+	}
+	
+	.display_record_indexing_row {
+		font-size: 0.875rem;
+	}
+	
+	.detail .detail_operate {
+		display: none;
+	}
+	
 }
 
 /* 视口宽度为768px 至  1024px 之间*/
 @media ( min-width : 769px) and (max-width : 1024px) {
+	.detail .detail_operate .op_lay {
+		width: 100%;
+	}
 	
+	.item_lay {
+		width: 45%;
+		font-size: 0.8rem;
+	}
 }
 
