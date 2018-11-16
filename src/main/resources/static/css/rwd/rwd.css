@@ -432,6 +432,14 @@ footer {
 	color: #23527c;
 }
 
+.table > tbody > tr > td > a:hover {
+	text-decoration: none;
+}
+
+.table > tbody > tr > td > a:link {
+	text-decoration: none;
+}
+
 .row_item {
 	width: 100%;
 }
