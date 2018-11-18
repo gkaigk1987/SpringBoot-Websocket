@@ -1,11 +1,16 @@
 package com.gk.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.IncorrectCredentialsException;
+import org.apache.shiro.authc.LockedAccountException;
+import org.apache.shiro.authc.UnknownAccountException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -32,6 +37,39 @@ public class IndexController {
 	}
 	
 	/**
+	 * 用户登录 
+	 * 此处不做真正的登录，真正的登录由Shiro提供
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping("/login")
+	public String login(HttpServletRequest request,Model model) {
+		String exceptionClassName = (String)request.getAttribute("shiroLoginFailure");
+        String error = null;
+        if(UnknownAccountException.class.getName().equals(exceptionClassName)) {
+            error = "用户名/密码错误";
+        } else if(IncorrectCredentialsException.class.getName().equals(exceptionClassName)) {
+            error = "用户名/密码错误";
+        } else if(LockedAccountException.class.getName().equals(exceptionClassName)) {
+        	error = "该账户已被锁定";
+        } else if(exceptionClassName != null) {
+            error = "其他错误：" + exceptionClassName;
+        }
+        model.addAttribute("error", error);
+		return "login";
+	}
+	
+	/**
+	 * 用户推出
+	 * @return
+	 */
+	@RequestMapping("/logout")
+	public String logout() {
+		SecurityUtils.getSubject().logout();
+		return "login";
+	}
+	
+	/**
 	 * websocket测试
 	 * @param text
 	 * @return
@@ -45,36 +83,6 @@ public class IndexController {
 		message.setMsg(text);
 		disruptorManager.work(message);
 		return text;
-	}
-	
-	/**
-	 * 
-	 * @param model
-	 * @return
-	 */
-	@GetMapping("/rwd")
-	public String rwd(Model model) {
-		return "rwd/rwd";
-	}
-	
-	/**
-	 * 
-	 * @param model
-	 * @return
-	 */
-	@GetMapping("/rwd_index")
-	public String rwdIndex(Model model) {
-		return "rwd/rwd_index";
-	}
-	
-	/**
-	 * 
-	 * @param model
-	 * @return
-	 */
-	@GetMapping("/rwd_detail")
-	public String rwdDetail(Model model) {
-		return "rwd/rwd_detail";
 	}
 	
 }

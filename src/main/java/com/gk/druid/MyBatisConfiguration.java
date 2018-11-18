@@ -70,7 +70,7 @@ public class MyBatisConfiguration implements EnvironmentAware {
 //			@Qualifier(value = "sqlSessionFactory") SqlSessionFactory sqlSessionFactory) {
 //		return new SqlSessionTemplate(sqlSessionFactory);
 //	}
-//
+
 	/**
 	 * 手动配置事务管理器
 	 * 如果不手动配置，springboot会自动调用DataSourceTransactionManagerAutoConfiguration配置transactionManager
