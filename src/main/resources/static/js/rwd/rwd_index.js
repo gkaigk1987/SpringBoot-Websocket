@@ -3,6 +3,6 @@
  */
 $(function() {
 	$('.do_search').click(function(){
-		window.location.href = "/rwd";
+		window.location.href = "/rwd/rwd";
 	});
 });
