@@ -37,6 +37,22 @@ public class IndexController {
 	}
 	
 	/**
+	 * websocket测试
+	 * @param text
+	 * @return
+	 */
+	@RequestMapping(value="/ws/{text}")
+	@ResponseBody
+	public String testWebsocket(@PathVariable String text) {
+		logger.info("websocket 消息发出");
+		Message message = new Message();
+		message.setId(1);
+		message.setMsg(text);
+		disruptorManager.work(message);
+		return text;
+	}
+	
+	/**
 	 * 用户登录 
 	 * 此处不做真正的登录，真正的登录由Shiro提供
 	 * @param request
@@ -68,21 +84,4 @@ public class IndexController {
 		SecurityUtils.getSubject().logout();
 		return "login";
 	}
-	
-	/**
-	 * websocket测试
-	 * @param text
-	 * @return
-	 */
-	@RequestMapping(value="/ws/{text}")
-	@ResponseBody
-	public String testWebsocket(@PathVariable String text) {
-		logger.info("websocket 消息发出");
-		Message message = new Message();
-		message.setId(1);
-		message.setMsg(text);
-		disruptorManager.work(message);
-		return text;
-	}
-	
 }
