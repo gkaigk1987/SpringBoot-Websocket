@@ -6,6 +6,8 @@ public class Message {
 	
 	private String msg;
 
+	private User user;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -21,7 +23,13 @@ public class Message {
 	public void setMsg(String msg) {
 		this.msg = msg;
 	}
-	
-	
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
 	
 }
