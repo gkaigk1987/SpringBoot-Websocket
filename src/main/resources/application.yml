@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: yit
+    active: home
 
 ---
 spring: 
@@ -48,6 +48,11 @@ spring:
     maxActive: 100
     initialSize: 10
     minIdle: 1
+
+logging:
+  level:
+    com.gk: debug
+    org.springframework: info
 
 server: 
   port: 9898
