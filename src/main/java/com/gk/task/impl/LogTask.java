@@ -17,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 public class LogTask implements ILogTask {
 
 	@Override
-	@Scheduled(fixedDelay = 5000)
+//	@Scheduled(fixedDelay = 5000)
 	public void testFixedDelayLog() {
 		log.info("定时生产的日志信息");
 	}

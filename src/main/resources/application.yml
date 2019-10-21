@@ -42,8 +42,10 @@ spring:
   datasource: 
     url: jdbc:mysql://localhost:3306/my_test?useSSL=false&rewriteBatchedStatements=true&allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useOldAliasMetadataBehavior=true&serverTimezone=CTT
     username: root
-    password: gkadmin
-    driver-class-name: com.mysql.cj.jdbc.Driver #mysql8如此配置
+#    password: gkadmin
+    password: gk1987
+#    driver-class-name: com.mysql.cj.jdbc.Driver #mysql8如此配置
+    driver-class-name: com.mysql.jdbc.Driver
     filters: stat
     maxActive: 100
     initialSize: 10

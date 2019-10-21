@@ -8,7 +8,7 @@ public class UtilTest {
 
 	@Test
 	public void test001() {
-		String code = ShiroMD5Util.encryptCode("123456", "8d78869f470951332959580424d4bf4f");
+		String code = ShiroMD5Util.encryptCode("123456", "admin");
 		System.out.println(code);
 	}
 	
